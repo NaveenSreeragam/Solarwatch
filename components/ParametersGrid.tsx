@@ -70,11 +70,11 @@ export const ParametersGrid: React.FC<ParametersGridProps> = ({
           </div>
 
           {/* Hover Explanation Tooltip */}
-          <div className="pointer-events-none absolute left-0 right-0 -bottom-2 translate-y-full opacity-0 group-hover:opacity-100 group-hover:translate-y-[calc(100%+8px)] transition-all duration-200 z-30 px-4 py-3 rounded-xl bg-space-950/95 border border-amber-500/30 shadow-xl text-xs text-slate-300 backdrop-blur-md">
-            <div className="font-semibold text-amber-400 mb-1 flex items-center gap-1.5 font-heading">
-              <span>What are Solar Flares?</span>
+          <div className="pointer-events-none absolute left-0 right-0 -bottom-2 translate-y-full opacity-0 group-hover:opacity-100 group-hover:translate-y-[calc(100%+8px)] transition-all duration-200 z-30 p-4 rounded-xl bg-slate-950 border border-amber-500/40 shadow-2xl backdrop-blur-xl font-sans">
+            <div className="font-bold text-amber-400 mb-1.5 text-xs tracking-wide uppercase font-sans">
+              What are Solar Flares?
             </div>
-            <p className="leading-relaxed text-[11px] text-slate-300">
+            <p className="leading-relaxed text-xs text-slate-100 font-sans font-normal">
               Intense bursts of electromagnetic radiation released from solar active regions (sunspots). Classified from A (weakest) to X (strongest), they can cause immediate high-frequency radio blackouts on Earth.
             </p>
           </div>
@@ -118,11 +118,11 @@ export const ParametersGrid: React.FC<ParametersGridProps> = ({
           </div>
 
           {/* Hover Explanation Tooltip */}
-          <div className="pointer-events-none absolute left-0 right-0 -bottom-2 translate-y-full opacity-0 group-hover:opacity-100 group-hover:translate-y-[calc(100%+8px)] transition-all duration-200 z-30 px-4 py-3 rounded-xl bg-space-950/95 border border-cyan-500/30 shadow-xl text-xs text-slate-300 backdrop-blur-md">
-            <div className="font-semibold text-cyan-400 mb-1 flex items-center gap-1.5 font-heading">
-              <span>What is a Coronal Mass Ejection (CME)?</span>
+          <div className="pointer-events-none absolute left-0 right-0 -bottom-2 translate-y-full opacity-0 group-hover:opacity-100 group-hover:translate-y-[calc(100%+8px)] transition-all duration-200 z-30 p-4 rounded-xl bg-slate-950 border border-cyan-500/40 shadow-2xl backdrop-blur-xl font-sans">
+            <div className="font-bold text-cyan-400 mb-1.5 text-xs tracking-wide uppercase font-sans">
+              What is a Coronal Mass Ejection (CME)?
             </div>
-            <p className="leading-relaxed text-[11px] text-slate-300">
+            <p className="leading-relaxed text-xs text-slate-100 font-sans font-normal">
               Massive clouds of solar plasma and magnetic fields ejected from the Sun into space at speeds up to millions of mph. If Earth-directed, they trigger geomagnetic storms and auroras 1 to 3 days later.
             </p>
           </div>
@@ -166,11 +166,11 @@ export const ParametersGrid: React.FC<ParametersGridProps> = ({
           </div>
 
           {/* Hover Explanation Tooltip */}
-          <div className="pointer-events-none absolute left-0 right-0 -bottom-2 translate-y-full opacity-0 group-hover:opacity-100 group-hover:translate-y-[calc(100%+8px)] transition-all duration-200 z-30 px-4 py-3 rounded-xl bg-space-950/95 border border-purple-500/30 shadow-xl text-xs text-slate-300 backdrop-blur-md">
-            <div className="font-semibold text-purple-300 mb-1 flex items-center gap-1.5 font-heading">
-              <span>What is a Geomagnetic Storm?</span>
+          <div className="pointer-events-none absolute left-0 right-0 -bottom-2 translate-y-full opacity-0 group-hover:opacity-100 group-hover:translate-y-[calc(100%+8px)] transition-all duration-200 z-30 p-4 rounded-xl bg-slate-950 border border-purple-500/40 shadow-2xl backdrop-blur-xl font-sans">
+            <div className="font-bold text-purple-300 mb-1.5 text-xs tracking-wide uppercase font-sans">
+              What is a Geomagnetic Storm?
             </div>
-            <p className="leading-relaxed text-[11px] text-slate-300">
+            <p className="leading-relaxed text-xs text-slate-100 font-sans font-normal">
               Disturbances in Earth's magnetosphere caused by incoming solar wind energy or CMEs. Measured on the G-scale (G1 to G5) using the Kp index; severe storms threaten power grids and satellite operations while creating vivid auroras.
             </p>
           </div>
@@ -214,11 +214,11 @@ export const ParametersGrid: React.FC<ParametersGridProps> = ({
           </div>
 
           {/* Hover Explanation Tooltip */}
-          <div className="pointer-events-none absolute left-0 right-0 -bottom-2 translate-y-full opacity-0 group-hover:opacity-100 group-hover:translate-y-[calc(100%+8px)] transition-all duration-200 z-30 px-4 py-3 rounded-xl bg-space-950/95 border border-red-500/30 shadow-xl text-xs text-slate-300 backdrop-blur-md">
-            <div className="font-semibold text-red-400 mb-1 flex items-center gap-1.5 font-heading">
-              <span>What is Solar Proton Flux (SEP)?</span>
+          <div className="pointer-events-none absolute left-0 right-0 -bottom-2 translate-y-full opacity-0 group-hover:opacity-100 group-hover:translate-y-[calc(100%+8px)] transition-all duration-200 z-30 p-4 rounded-xl bg-slate-950 border border-red-500/40 shadow-2xl backdrop-blur-xl font-sans">
+            <div className="font-bold text-red-400 mb-1.5 text-xs tracking-wide uppercase font-sans">
+              What is Solar Proton Flux (SEP)?
             </div>
-            <p className="leading-relaxed text-[11px] text-slate-300">
+            <p className="leading-relaxed text-xs text-slate-100 font-sans font-normal">
               Streams of high-energy protons accelerated by solar flares and CMEs. High particle flux poses biological radiation hazards for astronauts and high-latitude flights, and can cause single-event upsets in satellite electronics.
             </p>
           </div>
