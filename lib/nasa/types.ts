@@ -150,6 +150,8 @@ export interface ChartDataPoint {
 
 export interface SolarWatchPayload {
   fetchedAt: string;
+  /** True when the most recent NASA update was rate-limited and prior live data is shown. */
+  isDataDelayed: boolean;
   summaryText: string;
   flareSummary: FlareSummary;
   cmeSummary: CMESummary;

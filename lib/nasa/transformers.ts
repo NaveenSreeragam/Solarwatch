@@ -181,6 +181,7 @@ export function transformDONKIData(
 
   return {
     fetchedAt: new Date().toISOString(),
+    isDataDelayed: false,
     summaryText,
     flareSummary,
     cmeSummary,

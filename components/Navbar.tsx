@@ -11,6 +11,7 @@ interface NavbarProps {
   isRefreshing?: boolean;
   onRefresh?: () => void;
   isFallback?: boolean;
+  isDataDelayed?: boolean;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -18,6 +19,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   isRefreshing = false,
   onRefresh,
   isFallback = false,
+  isDataDelayed = false,
 }) => {
   const pathname = usePathname();
 
@@ -73,12 +75,21 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Right Status & Actions */}
         <div className="flex items-center gap-2.5">
           {/* Subtle Live Telemetry Badge */}
-          <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-xs font-mono">
+          <div
+            className={`flex items-center gap-2 px-3 py-1 rounded-full border text-xs font-mono ${
+              isDataDelayed
+                ? 'bg-amber-500/10 border-amber-500/30'
+                : 'bg-white/[0.04] border-white/[0.08]'
+            }`}
+            title={isDataDelayed ? 'NASA rate limit reached; showing the most recently retrieved data.' : 'NASA live telemetry'}
+          >
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-400" />
+              {!isDataDelayed && <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />}
+              <span className={`relative inline-flex rounded-full h-2 w-2 ${isDataDelayed ? 'bg-amber-400' : 'bg-cyan-400'}`} />
             </span>
-            <span className="text-slate-300 text-[11px] hidden sm:inline">NASA Live</span>
+            <span className={`text-[11px] hidden sm:inline ${isDataDelayed ? 'text-amber-200' : 'text-slate-300'}`}>
+              {isDataDelayed ? 'Data update delayed' : 'NASA Live'}
+            </span>
           </div>
 
           {/* Refresh Action */}
