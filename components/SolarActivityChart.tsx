@@ -195,8 +195,34 @@ export const SolarActivityChart: React.FC<SolarActivityChartProps> = ({ data }) 
                 }}
               />
               <Tooltip content={<CustomTooltip />} />
-              <ReferenceLine y={10000} stroke="#ef4444" strokeDasharray="4 4" label={{ value: 'X-Class Threshold', fill: '#ef4444', fontSize: 10 }} />
-              <ReferenceLine y={1000} stroke="#fbbf24" strokeDasharray="4 4" label={{ value: 'M-Class Threshold', fill: '#fbbf24', fontSize: 10 }} />
+              <ReferenceLine
+                y={10000}
+                stroke="#ef4444"
+                strokeDasharray="4 4"
+                label={{
+                  value: 'X-Class Threshold',
+                  fill: '#ef4444',
+                  fontSize: 11,
+                  fontFamily: 'monospace',
+                  fontWeight: 600,
+                  position: 'top',
+                  dy: -4,
+                }}
+              />
+              <ReferenceLine
+                y={1000}
+                stroke="#fbbf24"
+                strokeDasharray="4 4"
+                label={{
+                  value: 'M-Class Threshold',
+                  fill: '#fbbf24',
+                  fontSize: 11,
+                  fontFamily: 'monospace',
+                  fontWeight: 600,
+                  position: 'top',
+                  dy: -4,
+                }}
+              />
               <Area
                 type="monotone"
                 dataKey="numericIntensity"
