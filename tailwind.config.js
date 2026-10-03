@@ -29,9 +29,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        heading: ['var(--font-heading)', 'Inter', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
-        sans: ['var(--font-body)', 'Public Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
-        mono: ['var(--font-mono)', 'DM Mono', 'Courier New', 'monospace'],
+        heading: ['var(--font-heading)', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-body)', 'Public Sans', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-body)', 'Public Sans', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
         'nebula-gradient': 'radial-gradient(circle at 50% 20%, rgba(14, 165, 233, 0.15) 0%, rgba(3, 7, 18, 0.95) 75%)',
