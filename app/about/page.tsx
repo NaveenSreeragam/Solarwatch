@@ -16,7 +16,7 @@ export default function AboutPage() {
             <Info className="w-3.5 h-3.5 text-cyan-400" />
             <span>PROJECT SPECIFICATION & NASA ATTRIBUTION</span>
           </div>
-          <h1 className="text-4xl font-extrabold text-white tracking-tight">
+          <h1 className="font-heading text-4xl font-extrabold text-white tracking-tight">
             About SolarWatch
           </h1>
           <p className="text-slate-300 text-sm mt-2 max-w-2xl font-sans">
@@ -50,7 +50,7 @@ export default function AboutPage() {
               <div className="p-3 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-400">
                 <Sun className="w-6 h-6" />
               </div>
-              <h2 className="text-xl font-bold text-white">What SolarWatch Does</h2>
+              <h2 className="font-heading text-xl font-bold text-white">What SolarWatch Does</h2>
             </div>
             <p className="text-xs text-slate-300 leading-relaxed space-y-3 font-sans">
               SolarWatch implements an <strong>OBSERVE → ANALYZE → EXPLAIN → UNDERSTAND IMPACT</strong> workflow. It monitors solar activity (flares, CMEs, geomagnetic storms, energetic particles) directly from spaceborne observatories and presents them in a modern scientific mission-control dashboard.
@@ -63,7 +63,7 @@ export default function AboutPage() {
               <div className="p-3 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400">
                 <Database className="w-6 h-6" />
               </div>
-              <h2 className="text-xl font-bold text-white">NASA DONKI Integration</h2>
+              <h2 className="font-heading text-xl font-bold text-white">NASA DONKI Integration</h2>
             </div>
             <p className="text-xs text-slate-300 leading-relaxed font-sans mb-3">
               SolarWatch connects to NASA’s <strong>Database Of Notifications, Knowledge, Information (DONKI)</strong> hosted by the Community Coordinated Modeling Center (CCMC) at NASA Goddard Space Flight Center.
@@ -79,7 +79,7 @@ export default function AboutPage() {
               <div className="p-3 rounded-2xl bg-purple-500/10 border border-purple-500/30 text-purple-400">
                 <Code className="w-6 h-6" />
               </div>
-              <h2 className="text-xl font-bold text-white">Data Architecture</h2>
+              <h2 className="font-heading text-xl font-bold text-white">Data Architecture</h2>
             </div>
             <div className="text-xs font-mono text-slate-300 space-y-2 bg-space-950 p-4 rounded-2xl border border-white/5">
               <div>NASA DONKI Public APIs</div>
@@ -98,7 +98,7 @@ export default function AboutPage() {
               <div className="p-3 rounded-2xl bg-blue-500/10 border border-blue-500/30 text-blue-400">
                 <Globe className="w-6 h-6" />
               </div>
-              <h2 className="text-xl font-bold text-white">Data Limitations</h2>
+              <h2 className="font-heading text-xl font-bold text-white">Data Limitations</h2>
             </div>
             <ul className="text-xs text-slate-300 leading-relaxed space-y-2 font-sans list-disc list-inside">
               <li>Space weather events depend on satellite downlink latency (GOES, SOHO, STEREO, DSCOVR).</li>

@@ -26,7 +26,7 @@ export default function ErrorPage({
           <ShieldAlert className="w-12 h-12" />
         </div>
 
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+        <h1 className="font-heading text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
           Telemetry Transmission Interrupt
         </h1>
 

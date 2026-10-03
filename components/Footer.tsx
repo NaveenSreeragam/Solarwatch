@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Sun, ExternalLink, ShieldCheck, Heart, Github } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -10,14 +10,9 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
         {/* Brand info */}
         <div className="md:col-span-2 space-y-4">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-amber-500/20 to-cyan-500/20 border border-cyan-500/30 flex items-center justify-center text-amber-400">
-              <Sun className="w-5 h-5" />
-            </div>
-            <span className="font-extrabold text-lg text-white tracking-wider">
-              SOLARWATCH
-            </span>
-          </div>
+          <span className="font-heading font-extrabold text-lg text-white tracking-wider">
+            SOLAR<span className="text-cyan-400">WATCH</span>
+          </span>
           <p className="text-xs text-slate-300 leading-relaxed max-w-md">
             Interactive Space Weather Intelligence Dashboard created for NASA Space Apps Challenge. Processing live heliospheric telemetry from NASA DONKI and orbiting spacecraft sensors.
           </p>

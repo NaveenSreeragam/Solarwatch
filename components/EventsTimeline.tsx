@@ -88,20 +88,15 @@ export const EventsTimeline: React.FC<EventsTimelineProps> = ({ events }) => {
   };
 
   return (
-    <section className="glass-panel p-6 sm:p-8 rounded-3xl border border-white/10 my-8 shadow-2xl relative overflow-hidden">
-      {/* Reticles */}
-      <div className="absolute top-3 left-3 font-mono text-[9px] text-cyan-400/30">+ EVENT STREAM RETICLE</div>
-      <div className="absolute top-3 right-3 font-mono text-[9px] text-cyan-400/30">+ CHRONO LOG</div>
-
+    <section className="p-6 sm:p-8 rounded-3xl bg-space-900/40 border border-white/[0.08] my-14">
       {/* Header & Filter Controls */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
         <div>
-          <h3 className="font-heading text-2xl font-bold text-white tracking-tight flex items-center gap-2">
-            <Clock className="w-6 h-6 text-cyan-400" />
-            <span>Space Weather Event Timeline</span>
+          <h3 className="font-heading text-2xl font-bold text-white tracking-tight">
+            Event Stream
           </h3>
           <p className="text-xs text-slate-400 font-mono mt-1">
-            Chronological NASA Space Weather Notifications (DONKI Observatory)
+            Chronological log of solar flares, CMEs, and geomagnetic disturbances
           </p>
         </div>
 
@@ -154,52 +149,46 @@ export const EventsTimeline: React.FC<EventsTimelineProps> = ({ events }) => {
         }
 
         return (
-          <div className="space-y-4">
+          <div className="space-y-3">
             {filteredEvents.map((ev) => {
               return (
                 <div
                   key={ev.id}
-                  className="bg-space-950/70 p-5 rounded-2xl border border-white/10 hover:border-cyan-500/30 transition-all flex flex-col md:flex-row items-start md:items-center justify-between gap-4 group"
+                  className="bg-space-900/30 p-5 rounded-2xl border border-white/[0.06] hover:border-white/[0.12] transition-all flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
                 >
-                  <div className="flex items-start gap-4">
-                    <div className={`p-3 rounded-2xl border shrink-0 ${getEventBadge(ev.type)}`}>
-                      {getEventIcon(ev.type)}
+                  <div className="flex-1">
+                    <div className="flex flex-wrap items-center gap-2.5 mb-1.5">
+                      <span className="text-sm font-semibold text-white">
+                        {ev.title}
+                      </span>
+                      <span className={`px-2 py-0.5 rounded-full text-[10px] font-mono font-medium border ${getSeverityBadge(ev.severity)}`}>
+                        {ev.severity}
+                      </span>
+                      {ev.details.earthDirected && (
+                        <span className="px-2 py-0.5 rounded-full text-[10px] font-mono font-medium bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                          Earth Directed
+                        </span>
+                      )}
                     </div>
 
-                    <div>
-                      <div className="flex flex-wrap items-center gap-2 mb-1">
-                        <span className="text-base font-bold text-white group-hover:text-cyan-300 transition-colors">
-                          {ev.title}
-                        </span>
-                        <span className={`px-2 py-0.5 rounded text-[10px] font-mono font-bold border ${getSeverityBadge(ev.severity)}`}>
-                          {ev.severity}
-                        </span>
-                        {ev.details.earthDirected && (
-                          <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">
-                            Earth Directed
-                          </span>
-                        )}
-                      </div>
+                    <p className="text-xs text-slate-300 leading-relaxed max-w-3xl mb-2">
+                      {ev.description}
+                    </p>
 
-                      <p className="text-xs text-slate-300 leading-relaxed max-w-3xl mb-2">
-                        {ev.description}
-                      </p>
-
-                      <div className="flex flex-wrap items-center gap-4 text-[11px] font-mono text-slate-400">
-                        <span className="flex items-center gap-1">
-                          <Calendar className="w-3.5 h-3.5 text-cyan-400" />
-                          {formatDate(ev.timestamp)}
-                        </span>
-                        {ev.details.location && (
-                          <span>Location: {ev.details.location}</span>
-                        )}
-                        {ev.details.speed && (
-                          <span className="text-cyan-300">Speed: {ev.details.speed} km/s</span>
-                        )}
-                        {ev.details.activeRegion && (
-                          <span className="text-amber-300">Region: AR{ev.details.activeRegion}</span>
-                        )}
-                      </div>
+                    <div className="flex flex-wrap items-center gap-4 text-[11px] font-mono text-slate-400">
+                      <span className="flex items-center gap-1">
+                        <Calendar className="w-3.5 h-3.5 text-cyan-400" />
+                        {formatDate(ev.timestamp)}
+                      </span>
+                      {ev.details.location && (
+                        <span>Location: {ev.details.location}</span>
+                      )}
+                      {ev.details.speed && (
+                        <span className="text-cyan-300">Speed: {ev.details.speed} km/s</span>
+                      )}
+                      {ev.details.activeRegion && (
+                        <span className="text-amber-300">Region: AR{ev.details.activeRegion}</span>
+                      )}
                     </div>
                   </div>
 

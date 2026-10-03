@@ -14,7 +14,7 @@ export default function NotFound() {
           <AlertTriangle className="w-12 h-12" />
         </div>
 
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+        <h1 className="font-heading text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
           404 — Orbit Off Track
         </h1>
 

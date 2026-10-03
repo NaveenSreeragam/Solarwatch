@@ -21,7 +21,7 @@ export default async function SolarActivityPage() {
             <Sun className="w-3.5 h-3.5 text-amber-400" />
             <span>SOLAR X-RAY & ACTIVE REGION TELEMETRY</span>
           </div>
-          <h1 className="text-4xl font-extrabold text-white tracking-tight">
+          <h1 className="font-heading text-4xl font-extrabold text-white tracking-tight">
             Solar Activity Spectrum
           </h1>
           <p className="text-slate-300 text-sm mt-2 max-w-2xl font-sans">
@@ -67,7 +67,7 @@ export default async function SolarActivityPage() {
 
         {/* Flare Classification Guide */}
         <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-white/10 my-8">
-          <h2 className="text-2xl font-bold text-white mb-4">
+          <h2 className="font-heading text-2xl font-bold text-white mb-4">
             Understanding Solar Flare Classes (Logarithmic Scale)
           </h2>
           <p className="text-xs text-slate-300 mb-6 leading-relaxed">

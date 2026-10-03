@@ -21,7 +21,7 @@ export default async function EventsPage() {
             <Clock className="w-3.5 h-3.5 text-cyan-400" />
             <span>NASA DONKI EVENT FEED</span>
           </div>
-          <h1 className="text-4xl font-extrabold text-white tracking-tight">
+          <h1 className="font-heading text-4xl font-extrabold text-white tracking-tight">
             Space Weather Event Stream
           </h1>
           <p className="text-slate-300 text-sm mt-2 max-w-2xl font-sans">

@@ -94,11 +94,7 @@ export const WhyDoesThisMatter: React.FC = () => {
                 idx === 0 ? 'lg:col-span-2' : ''
               }`}
             >
-              {/* Corner Reticle */}
-              <div className="absolute top-2 right-2 font-mono text-[9px] text-cyan-400/30">
-                {item.tag}
-              </div>
-
+              {/* Card top section */}
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <div className={`p-3 rounded-2xl bg-gradient-to-br border ${item.color}`}>

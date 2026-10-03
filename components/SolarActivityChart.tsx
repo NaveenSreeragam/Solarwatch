@@ -106,25 +106,15 @@ export const SolarActivityChart: React.FC<SolarActivityChartProps> = ({ data }) 
   };
 
   return (
-    <div className="glass-panel p-6 rounded-3xl border border-white/10 shadow-2xl my-8 relative overflow-hidden">
-      {/* Background ambient glow */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
-
-      {/* Reticles */}
-      <div className="absolute top-3 left-3 font-mono text-[9px] text-cyan-400/30">+ CHART RETICLE 09</div>
-      <div className="absolute top-3 right-3 font-mono text-[9px] text-cyan-400/30">+ LOG SCALE SPECTRUM</div>
-
+    <div className="p-6 sm:p-8 rounded-3xl bg-space-900/40 border border-white/[0.08] shadow-2xl my-14">
       {/* Header & Controls */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
         <div>
-          <div className="flex items-center gap-2">
-            <Activity className="w-5 h-5 text-cyan-400" />
-            <h3 className="font-heading text-xl font-bold text-white tracking-tight">
-              Solar Activity — Recent Solar Flares
-            </h3>
-          </div>
+          <h3 className="font-heading text-2xl font-bold text-white tracking-tight">
+            Solar Activity & Flare Spectrum
+          </h3>
           <p className="text-xs text-slate-400 font-mono mt-1">
-            Interactive X-ray intensity timeline (Logarithmic Energy Output)
+            X-ray flare intensity timeline measured by GOES monitors
           </p>
         </div>
 
