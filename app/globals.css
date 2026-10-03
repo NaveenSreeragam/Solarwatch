@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 4%;
+    --foreground: 210 40% 98%;
+  }
+
+  body {
+    background-color: #030712;
+    color: #f3f4f6;
+    font-family: var(--font-body), 'Public Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono), 'DM Mono', 'Courier New', monospace;
+  }
+}
+
+/* Custom Reticle / Corner Crosshair Reticles from NebulaOS design */
+.reticle-corner {
+  position: relative;
+}
+.reticle-corner::before,
+.reticle-corner::after {
+  content: '+';
+  font-family: var(--font-mono), 'DM Mono', monospace;
+  position: absolute;
+  font-size: 10px;
+  color: rgba(56, 189, 248, 0.4);
+  pointer-events: none;
+}
+.reticle-corner::before {
+  top: -6px;
+  left: -6px;
+}
+.reticle-corner::after {
+  bottom: -6px;
+  right: -6px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #070d1e;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;
+}
+
+/* Glassmorphism styling */
+.glass-panel {
+  background: rgba(7, 13, 30, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  border-color: rgba(56, 189, 248, 0.3);
+  box-shadow: 0 0 25px -5px rgba(56, 189, 248, 0.15);
+}
+
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.95);
+  color: #0f172a;
+}
